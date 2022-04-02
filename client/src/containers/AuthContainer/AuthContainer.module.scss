@@ -1,0 +1,53 @@
+@import '../../styles/rem.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: rem(100px);
+}
+
+.input {
+  height: rem(40px);
+  width: rem(400px);
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--white);
+  color: var(--white);
+  font-size: rem(24px);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  &::placeholder {
+    color: var(--white);
+  };
+
+  &:focus::placeholder {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.error {
+  color: var(--red);
+  margin: rem(10px 0);
+  font-weight: bold;
+}
+
+.submit {
+  margin-top: rem(40px);
+  border: none;
+  border-radius: rem(20px);
+  font-size: rem(40px);
+  background: var(--white);
+  cursor: pointer;
+  padding: rem(10px 30px);
+  color: var(--grey)
+}

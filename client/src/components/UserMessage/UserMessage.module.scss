@@ -1,0 +1,38 @@
+@import '../../styles/rem.scss';
+
+.root {
+  display: flex;
+  justify-content: flex-start;
+  margin: rem(5px 0);
+}
+
+.block {
+  background: var(--light-grey);
+  padding: rem(6px 10px 23px);
+  border-radius: rem(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: rem(100px);
+  max-width: 50%;
+  position: relative;
+}
+
+.text {
+  font-size: rem(16px);
+  font-weight: 500;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.name {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.time {
+  position: absolute;
+  bottom: rem(5px);
+  right: rem(10px);
+  font-size: rem(12px);
+}

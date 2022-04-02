@@ -1,0 +1,34 @@
+@import '../../styles/rem.scss';
+
+.root {
+  display: flex;
+  justify-content: flex-end;
+  margin: rem(5px 0);
+  width: 100%;
+}
+
+.block {
+  background: var(--purple);
+  padding: rem(6px 10px 20px);
+  border-radius: rem(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: rem(100px);
+  max-width: 70%;
+  position: relative;
+}
+
+.text {
+  font-size: rem(16px);
+  font-weight: 500;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.time {
+  position: absolute;
+  bottom: rem(3px);
+  right: rem(10px);
+  font-size: rem(12px);
+}

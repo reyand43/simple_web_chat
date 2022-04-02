@@ -1,0 +1,40 @@
+@import 'rem';
+@import './IBMPlexSans-font.scss';
+
+:root {
+  --grey: #33333A;
+  --light-grey: #424250;
+  --light-grey2: #373740;
+  --blue: #71DEFF;
+  --red: #FF6951;
+  --purple: #A18CEB;
+  --white: rgb(255, 255, 255);
+  --font-family-IBMPlexSans: IBMPlexSans;
+  --font-family-default: var(--font-family-IBMPlexSans), sans-serif;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100vh;
+  color: var(--white);
+  background: var(--light-grey);
+  font-family: var(--font-family-default);
+  overflow: hidden;
+  -webkit-text-size-adjust: none;
+}
+
+p,
+span {
+  font-size: rem(14px);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  font-family: var(--font-family-default);
+}
