@@ -1,0 +1,7 @@
+build:
+  docker:
+    client: client/Dockerfile
+    socket: socket/DockerFile
+
+  
+
