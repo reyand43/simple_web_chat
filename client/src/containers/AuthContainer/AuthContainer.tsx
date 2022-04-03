@@ -5,11 +5,14 @@ import { SocketContext } from '../../context/SocketContext';
 import ACTIONS from '../../const/actions';
 import styles from './AuthContainer.module.scss';
 import { v4 as uuid } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { Dispatch } from '../../store';
 
 const AuthContainer: FC = () => {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const { socket } = useContext(SocketContext);
+  const dispatch = useDispatch<Dispatch>();
   const navigate = useNavigate();
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -29,8 +32,12 @@ const AuthContainer: FC = () => {
       name,
       id,
     });
+    dispatch.localData.setLocalReducer({
+      name,
+      id,
+    })
     navigate(CLIENT_URL.CHAT)
-  }, [name, socket])
+  }, [name])
 
   return (
     <div className={styles.root}>

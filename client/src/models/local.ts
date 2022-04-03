@@ -10,7 +10,7 @@ const initialState: IUser = {
 export const localData = createModel<RootModel>()({
   state: initialState,
   reducers: {
-    setLocalReducer(state: any, payload: IUser) {
+    setLocalReducer(state: IUser, payload: IUser) {
       return payload;
     },
   },

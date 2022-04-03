@@ -11,7 +11,6 @@ const users = new Map();
 
 io.on("connection", socket => {
   socket.on(ACTIONS.JOIN, ({ name, id }) => {
-    console.log("JOIN")
     users.set(id, name);
     socket.data = {
       id,

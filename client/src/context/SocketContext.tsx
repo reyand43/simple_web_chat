@@ -1,8 +1,8 @@
 import { createContext, ReactNode } from 'react';
-import { io } from 'socket.io-client';
+import { io, Socket } from 'socket.io-client';
 
 interface ContextValue {
-  socket: any;
+  socket: Socket;
 }
 
 interface Props {

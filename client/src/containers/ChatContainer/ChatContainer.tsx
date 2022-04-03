@@ -30,7 +30,7 @@ const ChatContainer: FC = () => {
     setMessageText('');
   }, [messageText])
 
-  const handleClickEnter = (e: any) => {
+  const handleClickEnter = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.keyCode === 13) {
       handleSend()
     }
